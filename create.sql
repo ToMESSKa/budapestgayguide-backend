@@ -1,0 +1,18 @@
+create sequence sauna_seq start with 1 increment by 50;
+create table sauna (sauna_id bigint not null, description varchar(255), name varchar(255), primary key (sauna_id));
+create sequence saunas_seq start with 1 increment by 50;
+create table saunas (sauna_id bigint not null, description varchar(255), name varchar(255), primary key (sauna_id));
+create sequence saunas_seq start with 1 increment by 50;
+create table saunas (sauna_id bigint not null, description varchar(255), name varchar(255), primary key (sauna_id));
+create sequence saunas_seq start with 1 increment by 50;
+create table saunas (sauna_id bigint not null, description varchar(255), name varchar(255), primary key (sauna_id));
+create sequence saunas_seq start with 1 increment by 50;
+create table saunas (sauna_id bigint not null, description varchar(255), name varchar(255), primary key (sauna_id));
+create sequence saunas_seq start with 1 increment by 50;
+create table saunas (sauna_id bigint not null, description varchar(255), name varchar(255), primary key (sauna_id));
+create sequence saunas_seq start with 1 increment by 50;
+create table saunas (sauna_id bigint not null, description varchar(255), name varchar(255), primary key (sauna_id));
+create sequence saunas_seq start with 1 increment by 50;
+create table saunas (sauna_id bigint not null, description varchar(255), name varchar(255), primary key (sauna_id));
+create sequence saunas_seq start with 1 increment by 50;
+create table saunas (sauna_id bigint not null, description varchar(255), name varchar(255), primary key (sauna_id));
