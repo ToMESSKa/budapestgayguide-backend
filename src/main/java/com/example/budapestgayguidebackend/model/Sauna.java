@@ -18,4 +18,9 @@ public class Sauna {
     private Long sauna_id;
     public String name;
     public String description;
+    public String website;
+    public String location;
+    public String address;
+    public String logoURL;
+
 }

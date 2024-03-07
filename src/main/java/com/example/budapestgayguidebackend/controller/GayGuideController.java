@@ -23,6 +23,7 @@ public class GayGuideController {
 
     @RequestMapping("/getsaunas")
     public List<Sauna> getSaunaData(){
+        System.out.println("test");
         return saunaService.findAll();
     }
 }
