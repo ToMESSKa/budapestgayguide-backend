@@ -30,7 +30,7 @@ public class GayGuideConfiguration {
                 saunaMagnum.setDescription("Magnum Sauna has been welcoming gay and bisexual men in Budapest since 2001. They offer Budapest's largest steam room, jacuzzi, sauna experiences and the largest cruising area in the city");
                 saunaMagnum.setName("Magnum Szauna");
                 saunaMagnum.setWebsite("https://gaysaunabudapest.com/en/");
-                saunaMagnum.setAddress("1085 Budapest, Csepreghy u. 2.");
+                saunaMagnum.setAddress("1085 Budapest, Csepreghy utca 2.");
                 saunaMagnum.setLocation("https://maps.app.goo.gl/h9qTRJk4GDwd4cFE6");
                 saunaMagnum.setLogoURL("images/saunas/magnum.png");
                 saunaService.SaveSauna(saunaMagnum);
