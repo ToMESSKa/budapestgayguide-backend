@@ -1,8 +1,7 @@
 package com.example.budapestgayguidebackend.controller;
 
-import com.example.budapestgayguidebackend.model.DTO.SaunaReviewDTO;
+import com.example.budapestgayguidebackend.model.DTO.SaunaRatingDTO;
 import com.example.budapestgayguidebackend.model.Sauna;
-import com.example.budapestgayguidebackend.repository.SaunaRepository;
 import com.example.budapestgayguidebackend.service.services.SaunaService;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
@@ -27,18 +26,11 @@ public class GayGuideController {
         this.saunaService = saunaService;
     }
 
-    RestTemplate restTemplate = new RestTemplate();
-
 
     @RequestMapping("/getsaunas")
     public List<Sauna> getSaunaData(){
-        String saunaRating = restTemplate.getForObject("https://places.googleapis.com/v1/places/ChIJoeHlp1ncQUcRvpWWYbKO3OY?fields=*&key=" + apiKey, String.class);
-        Gson gson = new Gson();
-        SaunaReviewDTO saunaM = gson.fromJson(saunaRating, SaunaReviewDTO.class);
-
-        System.out.println(saunaM.rating);
-        System.out.println(saunaRating);
-        return saunaService.findAll();
+        System.out.println(saunaService.findAll(apiKey));
+        return saunaService.findAll(apiKey);
     }
 
 

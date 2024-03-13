@@ -17,8 +17,12 @@ public class SaunaService implements ISaunaService {
     }
 
     @Override
-    public List<Sauna> findAll() {
-        return saunaRepository.findAll();
+    public List<Sauna> findAll(String apiKey) {
+        List<Sauna> saunas = saunaRepository.findAll();
+        for (Sauna sauna : saunas) {
+            sauna.setGoogleRating(apiKey);
+        }
+        return saunas;
     }
 
     public void SaveSauna(Sauna sauna) {

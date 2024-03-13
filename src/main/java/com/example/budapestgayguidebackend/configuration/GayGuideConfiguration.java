@@ -23,6 +23,7 @@ public class GayGuideConfiguration {
                 saunaSzauna69.setAddress("1094 Budapest, Angyal utca 2.");
                 saunaSzauna69.setLocation("https://maps.app.goo.gl/dR2TPh8jMinooofu5");
                 saunaSzauna69.setLogoURL("/images/saunas/szauna69.png");
+                saunaSzauna69.setGoogleMapsPlaceId("ChIJd07TVP_cQUcRRnu6xKo9l-w");
 
                 saunaService.SaveSauna(saunaSzauna69);
 
@@ -33,6 +34,7 @@ public class GayGuideConfiguration {
                 saunaMagnum.setAddress("1085 Budapest, Csepreghy utca 2.");
                 saunaMagnum.setLocation("https://maps.app.goo.gl/h9qTRJk4GDwd4cFE6");
                 saunaMagnum.setLogoURL("images/saunas/magnum.png");
+                saunaMagnum.setGoogleMapsPlaceId("ChIJoeHlp1ncQUcRvpWWYbKO3OY");
                 saunaService.SaveSauna(saunaMagnum);
 
                 Sauna saunaRudas = Sauna.builder().build();
@@ -42,6 +44,7 @@ public class GayGuideConfiguration {
                 saunaRudas.setAddress("1013 Budapest, Döbrentei tér 9.");
                 saunaRudas.setLocation("https://maps.app.goo.gl/Z4A91fexeRbRBgJZ6");
                 saunaRudas.setLogoURL("/images/saunas/rudas.svg");
+                saunaRudas.setGoogleMapsPlaceId("ChIJvwc6eUjcQUcRevigwh1jDOM");
                 saunaService.SaveSauna(saunaRudas);
         };
     }

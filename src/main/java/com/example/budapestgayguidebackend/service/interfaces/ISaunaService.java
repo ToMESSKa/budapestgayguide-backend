@@ -5,5 +5,5 @@ import com.example.budapestgayguidebackend.model.Sauna;
 import java.util.List;
 public interface ISaunaService {
 
-    List<Sauna> findAll();
+    List<Sauna> findAll(String apiKey);
 }
