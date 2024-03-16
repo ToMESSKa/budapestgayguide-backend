@@ -33,5 +33,4 @@ public class GayGuideController {
         return saunaService.findAll(apiKey);
     }
 
-
 }

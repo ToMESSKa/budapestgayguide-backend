@@ -8,6 +8,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+
 @Configuration
 public class GayGuideConfiguration {
 
@@ -46,6 +47,8 @@ public class GayGuideConfiguration {
                 saunaRudas.setLogoURL("/images/saunas/rudas.svg");
                 saunaRudas.setGoogleMapsPlaceId("ChIJvwc6eUjcQUcRevigwh1jDOM");
                 saunaService.SaveSauna(saunaRudas);
+
+
         };
     }
 }
