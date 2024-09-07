@@ -34,7 +34,7 @@ public class SecurityConfiguration {
             http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
         ///http.authorizeRequests().requestMatchers("/v1/oauth/login").permitAll().anyRequest().authenticated();
         http
-                .csrf().disable().authorizeRequests().requestMatchers("/saunas").permitAll();
+                .csrf().disable().authorizeRequests().requestMatchers("/saunas", "/getbars").permitAll();
 
         return http.build();
     }

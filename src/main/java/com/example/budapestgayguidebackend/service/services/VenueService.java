@@ -38,7 +38,7 @@ public class VenueService implements IVenueService {
     }
 
     @Override
-    public List<Venue> findVenuesByVenueTypes (String apiKey, VenueType venueType1, VenueType venueType2 ) {
+    public List<Venue> findVenuesByVenueTypes (VenueType venueType1, VenueType venueType2 ) {
         List<Venue> venues = venueRepository.findVenuesByVenueTypeOrVenueType(venueType1, venueType2);
         System.out.println(venues);
 //        for (Venue venue : venues) {

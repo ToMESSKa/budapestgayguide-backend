@@ -26,17 +26,4 @@ public class Event {
     @ManyToOne    
     @JoinColumn(name = "venue_id", referencedColumnName = "id")
     public Venue venue;
-
-    @Override
-    public String toString() {
-        return "Event{" +
-                "event_id=" + event_id +
-                ", name='" + name + '\'' +
-                ", url='" + url + '\'' +
-                ", location='" + location + '\'' +
-                ", event_creator='" + event_creator + '\'' +
-                ", time='" + time + '\'' +
-                ", venue=" + venue +
-                '}';
-    }
 }

@@ -19,7 +19,7 @@ public class AccountController {
     @Autowired
     AccountService accountService;
 
-    @GetMapping("/user/info")
+ @GetMapping("/user/info")
     public ResponseEntity getUserInfo(Principal principal) {
         System.out.println("endpoint");
         Account account = accountService.getAccount(Long.valueOf(principal.getName()));

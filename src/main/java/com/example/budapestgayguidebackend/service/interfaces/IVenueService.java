@@ -10,7 +10,7 @@ public interface IVenueService {
 
     List<Venue> findAll(String apiKey);
     List<Venue> findAll();
-    List<Venue> findVenuesByVenueTypes (String apiKey, VenueType venueType1, VenueType venueType2);
+    List<Venue> findVenuesByVenueTypes (VenueType venueType1, VenueType venueType2);
     List<Venue> findVenuesByVenueType (String apiKey, VenueType venueTypes);
     Venue findVenueById(Long venueId);
 }

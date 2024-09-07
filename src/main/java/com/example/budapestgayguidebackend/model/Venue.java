@@ -47,5 +47,4 @@ public class Venue {
     public Venue(String facebook) {
         this.facebook = facebook;
     }
-
 }

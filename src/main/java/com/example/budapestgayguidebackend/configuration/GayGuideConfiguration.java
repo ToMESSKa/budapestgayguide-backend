@@ -220,27 +220,6 @@ public class GayGuideConfiguration {
 
                 venueService.SaveVenue(partyOkama);
 
-                Event testEvent = Event.builder().event_id(1L)
-                        .event_creator("test creator")
-                        .name("test event")
-                        .url("https://www.test.com/test")
-                        .location("test location")
-                        .time("test time")
-                        .venue(partyOkama)
-                        .build();
-
-                eventService.SaveEvent(testEvent);
-
-                Event testEvent2 = Event.builder().event_id(2L)
-                        .event_creator("test creator2")
-                        .name("test event2")
-                        .url("https://www.test2.com/test2")
-                        .location("test location2")
-                        .time("test time2")
-                        .venue(barCoxx)
-                        .build();
-
-                eventService.SaveEvent(testEvent2);
         };
     }
 }

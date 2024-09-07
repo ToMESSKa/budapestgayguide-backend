@@ -46,8 +46,8 @@ public class GayGuideController {
     }
 
     @RequestMapping("/getclubsandparties")
-    public List<Venue> getClubAndPartiesData(){
-        return venueService.findVenuesByVenueTypes(apiKey, VenueType.PARTY, VenueType.CLUB);
+    public List<Venue>getClubAndPartiesData(){
+        return venueService.findVenuesByVenueTypes(VenueType.PARTY, VenueType.CLUB);
     }
 
 
