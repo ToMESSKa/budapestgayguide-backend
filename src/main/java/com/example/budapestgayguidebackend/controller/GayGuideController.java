@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@CrossOrigin(origins= {"https://bdpstgg.web.app", "https://localhost:3000", "http://localhost:8080", "http://127.0.0.1" }, maxAge = 4800 )
+@CrossOrigin(origins= {"https://evencollector-32ced4cf5d75.herokuapp.com/", "https://bdpstgg.web.app", "https://localhost:3000", "http://localhost:8080", "http://127.0.0.1" }, maxAge = 4800 )
 @RestController
 @Slf4j
 public class GayGuideController {
@@ -66,8 +66,9 @@ public class GayGuideController {
         return facebooks;
     }
 
-    @RequestMapping("/getevents")
-    public void getEvents(@RequestBody List<EventDTO> events){
+    @RequestMapping("/saveevents")
+    public void saveEvents(@RequestBody List<EventDTO> events){
+        eventService.deleteAll();
         for (EventDTO eventDTO : events){
             Venue venue = venueService.findVenueById(Long.valueOf(eventDTO.venue_id));
 
@@ -75,12 +76,20 @@ public class GayGuideController {
                     .name(eventDTO.getName())
                     .url(eventDTO.getUrl())
                     .location(eventDTO.getLocation())
-                    .event_creator(eventDTO.getEvent_creator())
                     .time(eventDTO.getTime())
                     .venue(venue)
                     .build();
             eventRepository.save(event);
         }
+    }
+
+    @RequestMapping("/getevents")
+    public List<Event> getEvents(){
+        List<Event> events = eventRepository.findAll();
+        for (Event event : events) {
+            System.out.println(event);
+        }
+        return eventRepository.findAll();
     }
 
 }

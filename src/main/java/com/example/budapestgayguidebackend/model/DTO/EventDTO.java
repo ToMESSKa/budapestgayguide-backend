@@ -16,7 +16,6 @@ public class EventDTO {
     public String name;
     public String url;
     public String location;
-    public String event_creator;
     public String time;
     public String venue_id;
 

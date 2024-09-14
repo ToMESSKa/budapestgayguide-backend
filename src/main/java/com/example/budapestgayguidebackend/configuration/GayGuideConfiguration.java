@@ -23,7 +23,7 @@ public class GayGuideConfiguration {
         EventService eventService;
 
 
-        @Bean
+/*        @Bean
         CommandLineRunner commandLineRunner () {
             return args -> {
                 Venue saunaSzauna69 = Venue.builder()
@@ -219,7 +219,6 @@ public class GayGuideConfiguration {
                         .build();
 
                 venueService.SaveVenue(partyOkama);
-
-        };
-    }
+        };*/
+/*    }*/
 }

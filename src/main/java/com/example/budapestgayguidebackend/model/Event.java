@@ -1,6 +1,7 @@
 package com.example.budapestgayguidebackend.model;
 
 import com.example.budapestgayguidebackend.model.DTO.VenueRatingDTO;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.google.gson.Gson;
 import jakarta.persistence.*;
 import lombok.*;
@@ -21,7 +22,6 @@ public class Event {
     public String name;
     public String url;
     public String location;
-    public String event_creator;
     public String time;
     @ManyToOne    
     @JoinColumn(name = "venue_id", referencedColumnName = "id")

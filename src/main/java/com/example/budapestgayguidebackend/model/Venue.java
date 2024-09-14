@@ -1,6 +1,7 @@
 package com.example.budapestgayguidebackend.model;
 
 import com.example.budapestgayguidebackend.model.DTO.VenueRatingDTO;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.google.gson.Gson;
 import jakarta.persistence.*;
 import lombok.*;
@@ -29,6 +30,7 @@ public class Venue {
     public String facebook;
     public String instagram;
     @OneToMany(mappedBy="venue")
+    @JsonBackReference
     public List<Event> events;
 
     @Transient
