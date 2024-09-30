@@ -23,8 +23,8 @@ public class GayGuideConfiguration {
         EventService eventService;
 
 
-/*        @Bean
-        CommandLineRunner commandLineRunner () {
+ /*       @Bean*/
+     /*   CommandLineRunner commandLineRunner () {
             return args -> {
                 Venue saunaSzauna69 = Venue.builder()
                 .description("Budapest‘s favourite men only sauna among young gay men. Established in 2004.")
@@ -220,5 +220,5 @@ public class GayGuideConfiguration {
 
                 venueService.SaveVenue(partyOkama);
         };*/
-/*    }*/
+/*}*/
 }

@@ -71,25 +71,24 @@ public class GayGuideController {
         eventService.deleteAll();
         for (EventDTO eventDTO : events){
             Venue venue = venueService.findVenueById(Long.valueOf(eventDTO.venue_id));
-
             Event event = Event.builder()
                     .name(eventDTO.getName())
                     .url(eventDTO.getUrl())
-                    .location(eventDTO.getLocation())
-                    .time(eventDTO.getTime())
+                    .location((venue.venueType.equals(VenueType.PARTY)) ?
+                eventDTO.getLocation() :
+                            venue.address)
+                    .time(eventDTO.convertDateString(eventDTO.getTime()))
                     .venue(venue)
                     .build();
-            eventRepository.save(event);
+            System.out.println(event.getTime());
+            eventService.save(event);
         }
     }
 
     @RequestMapping("/getevents")
     public List<Event> getEvents(){
         List<Event> events = eventRepository.findAll();
-        for (Event event : events) {
-            System.out.println(event);
-        }
-        return eventRepository.findAll();
+        return eventRepository.findAllByOrderByTimeAsc();
     }
 
 }

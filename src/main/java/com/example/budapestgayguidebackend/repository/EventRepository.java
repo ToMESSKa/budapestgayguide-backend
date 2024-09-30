@@ -11,4 +11,8 @@ public interface EventRepository extends JpaRepository<Event, Long> {
 
     void deleteAll();
 
+
+    List<Event> findAll();
+
+    List<Event> findAllByOrderByTimeAsc();
 }

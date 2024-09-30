@@ -6,7 +6,11 @@ import java.util.List;
 
 public interface IEventService {
 
-    List<Event> findAll();
+    List<Event>findAll();
     void deleteAll();
+
+    void save(Event event);
+
+    List<Event> findAllByOrderByTimeAsc();
 }
 

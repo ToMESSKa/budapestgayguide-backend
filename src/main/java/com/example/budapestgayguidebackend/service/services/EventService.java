@@ -20,11 +20,7 @@ public class EventService implements IEventService {
 
     @Override
     public List<Event> findAll() {
-        List<Event> events = eventRepository.findAll();
-//        for (Venue venue : venues) {
-//            venue.setGoogleRating(apiKey);
-//        }
-        return events;
+        return eventRepository.findAll();
     }
 
     @Override
@@ -33,7 +29,12 @@ public class EventService implements IEventService {
     }
 
 
-    public void SaveEvent(Event event) {
+    public void save(Event event) {
         eventRepository.save(event);
     }
+
+    @Override
+    public List<Event> findAllByOrderByTimeAsc() {
+        return eventRepository.findAllByOrderByTimeAsc();
     }
+}

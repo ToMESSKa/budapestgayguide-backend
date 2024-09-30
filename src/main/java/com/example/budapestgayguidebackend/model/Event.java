@@ -7,6 +7,9 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.web.client.RestTemplate;
 
+import java.sql.Timestamp;
+import java.time.ZonedDateTime;
+
 @Builder
 @Entity
 @Getter
@@ -22,7 +25,7 @@ public class Event {
     public String name;
     public String url;
     public String location;
-    public String time;
+    public ZonedDateTime time;
     @ManyToOne    
     @JoinColumn(name = "venue_id", referencedColumnName = "id")
     public Venue venue;
