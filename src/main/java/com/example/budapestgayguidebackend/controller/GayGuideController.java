@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@CrossOrigin(origins= {"https://evencollector-32ced4cf5d75.herokuapp.com/", "https://bdpstgg.web.app", "https://localhost:3000", "http://localhost:8080", "http://127.0.0.1" }, maxAge = 4800 )
+@CrossOrigin(origins= {"https://evencollector-32ced4cf5d75.herokuapp.com/", "https://bdpstgg.web.app", "https://budapestgayguide.com/", "https://localhost:3000", "http://localhost:8080", "http://127.0.0.1" }, maxAge = 4800 )
 @RestController
 @Slf4j
 public class GayGuideController {
